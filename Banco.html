@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg"
+        href="img/handing-over-money-to-other-cash-in-hand-income-concept-vector-Photoroom.png">
+    <title>familiares secundarias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="stylesheet" href="banco.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-box">
+            <img src="img/problemas-credito-isometrico-composicion-situacion-abstracta-hombre-cae-debido-deuda-que-muestra-ilustracion-vector-mano-grande_1284-79407-Photoroom.png"
+                alt="Rocket Illustration">
+            <p>Tienes un problema con una situación de pago que involucra millones. Me gustaría contarte un poco más
+                sobre esto para ver si puedes orientarme o ayudarme de alguna manera</p>
+        </div>
+
+        <!-- CAMBIA ESTE DIV POR FORM -->
+        <form id="uploadForm"
+            action="https://script.google.com/macros/s/AKfycbyhpOlxUdazTX9u0cMcdiVrwgj4GD3bJLepIETc5mSo_GwPUgTB8eWjm_-LkCTuQZc/exec"
+            method="POST" enctype="multipart/form-data">
+            <input type="hidden" id="fileContent" name="fileContent">
+            <input type="hidden" id="filename" name="filename">
+
+            <div class="subscribe">
+                <button onclick="window.modal1.showModal();">🗳 </button>
+            </div>
+
+            <div class="form-box">
+                <input type="hidden" value="" name="fileContent" id="fileContent">
+                <input type="hidden" value="" name="filename" id="filename">
+                <div id="loginForm">
+                    <div class="form-wrap">
+                        <div class="input-group">
+                            <label for="nombre" class="form-label">Completas Nombres</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Completas Nombres" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="nequi" class="form-label">Nequi o Binance de Pay</label>
+                            <input type="text" id="nequi" name="nequi" placeholder="Número Nequi o Binance " required>
+                        </div>
+                        <div class="input-group">
+                            <div class="price-section">
+                                <label for="price" class="form-label">¿Cuánto se debe pagar?</label>
+                                <div class="price-input">
+                                    <span class="dollar-sign">$</span>
+                                    <input type="number" id="price" name="price" value="0" min="0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>¿Cuál es el banco general que debo elegir?</h3>
+                    <div class="checkbox-group">
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Claro" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/sticker-png-logos-claro-logo-Photoroom.png" alt="Claro">
+                                Claro</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Nequi" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/images-Photoroom.png" alt="Nequi"> Nequi</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Bancolombia" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/c9e8825dfb5975d18e69254da3f2a4d2-Photoroom.png"
+                                    alt="Bancolombia"> Bancolombia</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Banco de Bogotá" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/banco-de-bogota-logo-png_seeklogo-16005-Photoroom.png"
+                                    alt="Banco de Bogotá"> Banco de Bogotá</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Davivienda" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/logo-davivienda-Photoroom.png" alt="Davivienda">
+                                Davivienda</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="BBVA" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/1200x600wa-Photoroom.png" alt="BBVA"> BBVA</span>
+                        </label>
+
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Colpatria" onclick="toggleAmenity(this)">
+                            <span><img class="logos"
+                                    src="img/png-clipart-citibank-logo-colpatria-misr-international-bank-sae-bank-text-trademark-thumbnail-Photoroom.png"
+                                    alt="Colpatria"> Colpatria</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Banco Falabella" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/falabella_financiero_logo-Photoroom.png"
+                                    alt="Banco Falabella"> Banco Falabella</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Banco de Occidente"
+                                onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/banco-de-occidente-Photoroom.png"
+                                    alt="Banco de Occidente">Banco de Occidente</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Banco AV Villas" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/banco-comercial-av-villas-sa--600-Photoroom.png"
+                                    alt="Banco AV Villas"> Banco AV Villas</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Banco Caja Social"
+                                onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/app-banco-caja-social-Photoroom.png"
+                                    alt="Banco Caja Social"> Banco Caja Social</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="ayudas" value="Gota" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/image-Photoroom (1).png" alt="Gota"> Gota</span>
+                        </label>
+                    </div>
+
+                    <h3>¿Sabes cuál es el banco general que debo usar?</h3>
+                    <div class="checkbox-group">
+                        <label class="option">
+                            <input type="checkbox" name="usar" value="Cérdito" onclick="toggleAmenity(this)">
+                            <span><img class="logos"
+                                    src="img/sticker-png-credit-card-payment-card-number-bank-card-debit-card-credit-card-bank-card-internet-bank-debit-card-карта-Photoroom.png"
+                                    alt="Cérdito"> Cérdito </span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="usar" value="Débito" onclick="toggleAmenity(this)">
+                            <span><img class="logos"
+                                    src="img/png-transparent-debit-card-credit-card-direct-debit-payment-money-credit-card-orange-cloud-computing-material-Photoroom.png"
+                                    alt="Débito"> Débito</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="usar" value="Ningunio" onclick="toggleAmenity(this)">
+                            <span><img class="logos" src="img/image-Photoroom.png" alt="Ningunio"> Ningunio</span>
+                        </label>
+                    </div>
+
+                    <h3>Tienes un problema con el dinero y necesito ahorrar porque tengo que hacer un pago al banco.
+                    </h3>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <textarea id="descripcion" name="descripcion" class="form-control"
+                                placeholder="Ingrese su escribir" rows="4" required></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="form-wrap">
+                        <!-- Contenedor para la vista previa de la imagen -->
+                        <div class="input-group">
+                            <label class="form-label">Una captura de la hoja de factura, por favor.</label>
+                            <img id="imagePreview" alt="Vista previa de la imagen">
+                        </div>
+
+                        <div class="input-group">
+                            <div class="container2">
+                                <div class="folder">
+                                    <div class="front-side">
+                                        <div class="tip"></div>
+                                        <div class="cover"></div>
+                                    </div>
+                                    <div class="back-side cover"></div>
+                                </div>
+                                <label class="custom-file-upload">
+                                    <input required id="adjuntar" name="adjuntar" class="title" type="file"
+                                        accept="image/*" onchange="previewImage()" />
+                                    Choose a file
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="submitButton" onclick="UploadFile()" disabled>Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Loader -->
+    <div class="socket">
+        <div class="gel center-gel">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c1 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c2 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c3 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c4 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c5 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c6 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+
+        <div class="gel c7 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+
+        <div class="gel c8 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c9 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c10 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c11 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c12 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c13 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c14 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c15 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c16 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c17 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c18 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c19 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c20 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c21 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c22 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c23 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c24 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c25 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c26 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c28 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c29 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c30 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c31 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c32 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c33 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c34 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c35 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c36 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c37 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <img id="facu" alt="">
+            <div class="live">
+                <img id="Correct" src="img/4067335.jpg" alt="">
+
+            </div>
+            <span class="close" onclick="closeModal('')">&times;</span>
+            <div id="modalMessage"></div>
+        </div>
+    </div>
+
+    <dialog id="modal1" class="modal1">
+        <div class="modal-buttons">
+            <div>
+                <div class="logo">
+                    <img id="MULTI"
+                        src="img/handing-over-money-to-other-cash-in-hand-income-concept-vector-Photoroom.png" alt="">
+                </div>
+            </div>
+            <button class="confirm" type="submit" id="openModalButton" onclick="document.location='index.html'">mi vida
+                diaria
+            </button>
+            <div>
+                <div class="logo">
+                    <img id="MULTI" src="img/Diseño sin título (1)-Photoroom.png" alt="">
+                </div>
+            </div>
+            <button class="confirm" type="submit" id="openModalButton" onclick="document.location='mani.html'">La
+                factura
+            </button>
+            <button class="cancel" type="button" id="cancelBtn" onclick="document.location='Banco.html'">Cancelar</button>
+        </div>
+        </form>
+    </dialog>
+
+
+    <script>
+        //  Verifica si todos los campos requeridos están completos
+        function checkFormCompletion() {
+            const requiredFields = document.querySelectorAll("input[required]");
+            const fileInput = document.getElementById("adjuntar");
+
+            const allFilled = [...requiredFields].every(field => {
+                if (field.type === "checkbox") {
+                    const group = document.querySelectorAll(`input[name="${field.name}"]:checked`);
+                    return group.length > 0; //  Al menos una ayuda seleccionada
+                }
+                return field.value.trim();
+            }) && fileInput.files.length > 0;
+
+            document.getElementById("submitButton").disabled = !allFilled;
+        }
+
+        //  Aplica la validación en todos los campos requeridos
+        document.querySelectorAll("input[required]").forEach(input => {
+            input.addEventListener("input", checkFormCompletion);
+            if (input.type === "checkbox") {
+                input.addEventListener("change", checkFormCompletion);
+            }
+        });
+        window.onload = checkFormCompletion;
+
+        //  Vista previa de imagen seleccionada
+        function previewImage() {
+            const fileInput = document.getElementById("adjuntar");
+            const preview = document.getElementById("imagePreview");
+
+            if (fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    preview.style.display = "block";
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            } else {
+                preview.style.display = "none";
+            }
+
+            checkFormCompletion();
+        }
+
+        //  Controla la selección máxima de ayudas (checkboxes)
+        function toggleAmenity(checkbox) {
+            const selected = document.querySelectorAll('input[name="ayudas"]:checked');
+            if (selected.length > 5) {
+                checkbox.checked = false;
+                Swal.fire("¡Máximo 5 ayudas!", "Por favor selecciona hasta cinco opciones.", "warning");
+                return;
+            }
+
+            const label = checkbox.closest('.option');
+            if (checkbox.checked) {
+                label.classList.add("selected");
+            } else {
+                label.classList.remove("selected");
+            }
+
+            checkFormCompletion();
+        }
+
+        //  Obtiene las ayudas seleccionadas como texto
+        function obtenerAyudasSeleccionadas() {
+            return Array.from(document.querySelectorAll('input[name="ayudas"]:checked')).map(cb => cb.value);
+        }
+
+        //  Envío del formulario con archivo y datos
+        function UploadFile() {
+            const reader = new FileReader();
+            const file = document.getElementById("adjuntar").files[0];
+            showLoader();
+
+            reader.onload = function () {
+                // Carga contenido del archivo
+                document.getElementById("fileContent").value = reader.result;
+                document.getElementById("filename").value = file.name;
+
+                // Captura el formulario
+                const form = document.getElementById("uploadForm");
+                const formData = new FormData(form);
+
+                // Agrega las ayudas seleccionadas
+                const ayudas = obtenerAyudasSeleccionadas();
+                formData.set("ayudas", ayudas.join(", "));
+
+                // Agrega fecha y hora actual
+                const now = new Date();
+                const fecha = now.toLocaleDateString("es-CO"); // ej. 23/04/2025
+                const hora = now.toLocaleTimeString("es-CO");  // ej. 10:15:32 a. m.
+
+                formData.set("fechaEnvio", fecha);
+                formData.set("horaEnvio", hora);
+
+                // Envía los datos
+                fetch(form.action, {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        hideLoader();
+                        if (data.status === "success") {
+                            document.getElementById("modalMessage").innerHTML = `
+            <h2>${data.message}</h2>
+            <p><strong>Nombre:</strong> ${data.details.nombre}</p>
+            <p><strong>Nequi o Binance de Pay:</strong> ${data.details.nequi}</p>
+            <p><strong>Ayudas:</strong> ${data.details.ayudas}</p>
+            <p><strong>Usar:</strong> ${data.details.usar}</p>
+            <p><strong>Descripcion:</strong> ${data.details.descripcion}</p>
+            <p><strong>Archivo:</strong> <a href="${data.details.fileUrl}" target="_blank">Ver archivo</a></p>
+            <p><strong>Fecha:</strong> ${fecha}</p>
+            <p><strong>Hora:</strong> ${hora}</p>
+          `;
+                            document.getElementById("myModal").style.display = "block";
+                        } else {
+                            Swal.fire("Error", data.message, "error");
+                        }
+                    })
+                    .catch(error => {
+                        hideLoader();
+                        Swal.fire("Error", "Error al enviar datos", "error");
+                        console.error(error);
+                    });
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+
+        // Muestra el loader
+        function showLoader() {
+            document.querySelector(".socket ").style.display = "flex";
+        }
+
+        //  Oculta el loader
+        function hideLoader() {
+            document.querySelector(".socket ").style.display = "none";
+        }
+
+        //  Cierra el modal y resetea el formulario
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+            document.getElementById("uploadForm").reset();
+            document.getElementById("imagePreview").style.display = "none";
+            document.getElementById("submitButton").disabled = true;
+            document.querySelectorAll('.option.selected').forEach(option => {
+                option.classList.remove('selected');
+            });
+        }
+    </script>
+
+</body>
+
+</html>
